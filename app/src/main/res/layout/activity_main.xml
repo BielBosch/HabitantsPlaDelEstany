@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/pladelestanymap"
+        tools:ignore="MissingConstraints" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/idText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:text="PLA DE L'ESTANY"
+            android:textSize="25sp"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/idText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idText1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Habitants del Pla de l'Estany"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/idText3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idText2"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="75dp"
+            android:text="Selecciona el municipi"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/idButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="320dp"
+            android:text="Cerca"
+            android:textSize="15sp"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/idText4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idText1"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="50dp"
+            android:text="32.293"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/idText5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idText4"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="75dp"
+            android:text="Número d'habitants"
+            android:textSize="18sp" />
+
+
+        <AutoCompleteTextView
+            android:id="@+id/idText6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idText3"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:completionThreshold="1"
+            android:hint="Selecciona el municipi"
+            android:imeOptions="actionDone"
+            android:minHeight="10dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/idText7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idText5"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="35dp"
+            android:text=""
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
