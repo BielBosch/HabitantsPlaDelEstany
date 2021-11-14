@@ -40,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 // Aquest és el codi que s'executa al clicar
                 tv_1.setText("Has fet clic!");
 
-                if (R.id.idText6 > 2) {
-                    //mirar AIXO
-                }
+               // if (R.id.idText6) {
+                    //aqui tenia pensat fer algo amb un if tipo si posicio0 de la array e igual igual
+                    //a posicio0 de la array de habitnats imprimir el numero al textview pero no trobo la manera adequada de fero
+                //}
             }
         });
 
