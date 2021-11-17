@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,32 +23,38 @@ public class MainActivity extends AppCompatActivity {
             254, 20053, 677, 2399, 463, 1469, 448, 4677, 229, 1133, 835};
 
     protected void onCreate(Bundle savedInstanceState) {
+
+
         //mostrar municipis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, municipis);
         AutoCompleteTextView atv_municipis = (AutoCompleteTextView)
-                findViewById(R.id.idText6);
+                findViewById(R.id.textEntrada);
         atv_municipis.setAdapter(adapter);
 
-        //mostrar nHabitants
 
         final Button btn_1 = findViewById(R.id.idButton);
-        final TextView tv_1 = findViewById(R.id.idText7);
+        final TextView tv_1 = findViewById(R.id.nHabitants);
 
         btn_1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                // Aquest és el codi que s'executa al clicar
-                tv_1.setText("Has fet clic!");
+                AutoCompleteTextView source = (AutoCompleteTextView) findViewById(R.id.textEntrada);
+                String valorUsuari = source.getText().toString(); //Aconseguim el valor String que ha decidit posar el usuari
 
-               // if (R.id.idText6) {
-                    //aqui tenia pensat fer algo amb un if tipo si posicio0 de la array e igual igual
-                    //a posicio0 de la array de habitnats imprimir el numero al textview pero no trobo la manera adequada de fero
-                //}
+                int conversio = 0;
+
+                for (int i = 0; i < municipis.length; i++) {    //for  que recorra larray de municipis
+                    if (valorUsuari.equals(municipis[i])) {      //si el valor que a entrar l'usuari es igual al del municipi
+                        conversio = nHabitants[i];              //la variable conversio es epr guardar el valor abans de pasarlo a String
+                    }
+                    String numPoblacioFinal = Integer.toString(conversio);  //aixo pasa de int a string per podero imprimir
+                    tv_1.setText(numPoblacioFinal);               //asignacio al text view on simprimix el numero dhabitans
+                }
             }
+
+
         });
-
-
     }
 }

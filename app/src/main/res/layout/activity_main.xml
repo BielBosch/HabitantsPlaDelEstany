@@ -19,7 +19,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/idText1"
+            android:id="@+id/h1Titol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/imageView"
@@ -29,20 +29,20 @@
             tools:ignore="NotSibling" />
 
         <TextView
-            android:id="@+id/idText2"
+            android:id="@+id/Titol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idText1"
+            android:layout_below="@+id/h1Titol"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
             android:text="Habitants del Pla de l'Estany"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/idText3"
+            android:id="@+id/SeleccionaMuni"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idText2"
+            android:layout_below="@+id/Titol"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="75dp"
             android:text="Selecciona el municipi"
@@ -60,20 +60,20 @@
             tools:ignore="NotSibling" />
 
         <TextView
-            android:id="@+id/idText4"
+            android:id="@+id/xifraTotalHabitants"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idText1"
+            android:layout_below="@+id/h1Titol"
             android:layout_marginLeft="330dp"
             android:layout_marginTop="50dp"
             android:text="32.293"
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/idText5"
+            android:id="@+id/textNHabitants"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idText4"
+            android:layout_below="@+id/xifraTotalHabitants"
             android:layout_marginLeft="240dp"
             android:layout_marginTop="75dp"
             android:text="Número d'habitants"
@@ -81,10 +81,10 @@
 
 
         <AutoCompleteTextView
-            android:id="@+id/idText6"
+            android:id="@+id/textEntrada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/idText3"
+            android:layout_below="@id/SeleccionaMuni"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:completionThreshold="1"
@@ -94,10 +94,10 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/idText7"
+            android:id="@+id/nHabitants"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/idText5"
+            android:layout_below="@+id/textNHabitants"
             android:layout_marginLeft="320dp"
             android:layout_marginTop="35dp"
             android:text=""
